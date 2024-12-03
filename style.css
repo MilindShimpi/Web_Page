@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5); /* 20% opacity for transparency */
+  backdrop-filter: blur(8px); /* Apply blur effect */
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+header > div {
+  width: 30%;
+}
+
+header > div > ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+header > div > ul > li > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+header > div > ul > li > a:hover {
+  background-color: white;
+  color: black;
+}
+
+
+body {
+  padding-top:  10px; /* Add space for the fixed header */
+}
+
+#about_us, #services, #tables, #contact_us {
+  padding-top: 0px; /* Adjust the padding to push the sections down */
+}
+
+
+#carousel {
+  width: 100%;
+  height: 100vh; /* Fixed height for the carousel */
+  position: relative;
+}
+
+#carousel > img {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensure consistent image size without distortion */
+}
+#carousel > button {
+  position: absolute;
+  top: 30%;
+  font-size: 10rem;
+  background-color: transparent;
+  border: none;
+}
+
+
+#carousel > button {
+  position: absolute;
+  top: 50%; /* Position buttons at the middle of the section */
+  transform: translateY(-50%); /* Correct for the offset so that it's centered vertically */
+  height: 180px; /* Fixed height for the buttons */
+  width: 60px; /* Fixed width for the buttons */
+  background: rgba(0, 0, 0, 0.3); /* Transparent black background */
+  backdrop-filter: blur(10px); /* Blurred effect */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem; /* Arrow size */
+  cursor: pointer;
+  z-index: 10; /* Keep it above the image */
+  transition: background 0.3s; /* Smooth hover effect */
+}
+
+
+
+.previous {
+  left: 0; /* Align the button to the left */
+}
+
+.next {
+  right: 0; /* Align the button to the right */
+}
+#carousel > button:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+
+
+
+
+
+
+#about_us, #services {
+  padding-top: 170px;
+  padding: 2rem;
+  margin: 2rem 0;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+#about_us h2, #services h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about_us p, #services p, #services ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+#services ul {
+  list-style-type: none;
+}
+
+#services li {
+  margin-bottom: 2rem;
+}
+
+#services h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+main {
+  position: relative;
+  padding-top: 80px;
+  
+}
+main > #tables {
+  display: flex;
+  justify-content: center;
+}
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+/* th,
+td {
+  padding: 1rem;
+} */
+
+table {
+  width: 80%; /* Set the table to take up the full width of the container */
+  margin: 20px 0; /* Add spacing above and below the table */
+}
+
+
+th, td {
+  padding: 1rem 2rem; /* Increase horizontal padding for more space */
+  text-align: center; /* Horizontal centering */
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f0f0f0; /* Light background color for the header */
+  text-align: center; /* Align text to the left for readability */
+}
+
+
+#top-students {
+  display: flex;
+  justify-content: center; /* Center the tiles container */
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 40%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Space between student tiles */
+  width: 100%; /* Ensure the container takes the full width */
+  padding-bottom: 20px; /* Optional: Adds space below the scroll */
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+}
+
+#top-students::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+}
+
+.students-wrapper {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Space between tiles */
+}
+
+.student-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%; /* Adjust width to fit 4 tiles properly */
+  max-width: 220px; /* Optional: Set a max width for each tile */
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 180px; /* Prevent tiles from shrinking too much */
+}
+
+.student-tile img {
+  width: 100%;
+  height: 150px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image fills the space */
+}
+
+.student-tile h2 {
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#contact_us {
+  background-color: #f9f9f9;
+  padding: 40px 20px; /* Add spacing around the form */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+#contact_us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure the padding doesn't affect the width */
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #3e8e41;
+  outline: none;
+}
+
+form button {
+  padding: 12px;
+  background-color: #3e8e41; /* Green background */
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #2d6a2e; /* Darker green on hover */
+}
+
+form button:active {
+  background-color: #245c24; /* Even darker on click */
+}
+
+form button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  #contact_us {
+    padding: 20px;
+  }
+
+  form {
+    padding: 15px;
+  }
+}

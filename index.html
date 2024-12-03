@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page</title>
+    <link
+      rel="shortcut icon"
+      href="./images/download.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <ul>
+          <li><a href="#carousel">Home</a></li>
+          <li><a href="#about_us">About Us</a></li>
+          <li><a href="#services">Service </a></li>
+          <li><a href="#contact_us">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+    <section id="carousel">
+      <img
+        src="./images/img11.jpg"
+        alt="image"
+      />
+
+      <button class="previous">&lt</button>
+      <button class="next">&gt</button>
+    </section>
+    
+
+
+    <main>
+      <section id="about_us">
+        <h2>About Us</h2>
+        <p>
+          We are a passionate team dedicated to providing the best services to our customers.
+          With years of experience in the industry, we strive to deliver high-quality solutions that meet the needs of individuals and businesses alike.
+          Our commitment to excellence is reflected in everything we do, from the products we offer to the customer service we provide.
+        </p>
+        <p>
+          Our mission is to empower our clients through innovative solutions that are tailored to their unique needs.
+          Whether you’re looking for cutting-edge technology or personal support, we’ve got you covered.
+        </p>
+      </section>
+
+      <section id="tables">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="5">Students data</th>
+            </tr>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>Phone No.</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <div id="top-students"></div>
+
+      <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>
+            <h3>Web Development</h3>
+            <p>
+              We offer comprehensive web development services, from building simple websites to complex web applications. Our team ensures that your website is responsive, user-friendly, and optimized for performance.
+            </p>
+          </li>
+          <li>
+            <h3>Mobile App Development</h3>
+            <p>
+              Our mobile app development services include creating feature-rich apps for both iOS and Android. We work with you to build an app that delivers a seamless experience to your users.
+            </p>
+          </li>
+          <li>
+            <h3>Consulting & Strategy</h3>
+            <p>
+              We provide consulting services to help you define your digital strategy and achieve your business goals. Whether it’s streamlining processes or developing new solutions, we’re here to guide you every step of the way.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      
+
+    </main>
+
+
+    
+
+    <footer id="contact_us">
+      <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required onfocus="this.style.backgroundColor='#f0f0f0'" onblur="this.style.backgroundColor='white'" oninput="console.log('Input changed')">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone No.:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Submit</button>
+            </form>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
